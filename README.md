@@ -3,6 +3,21 @@ A collection of Python and Bash scripts for various IT support tasks, including 
 
 Several scripts in this repository use positional parameters to accept arguments. Positional parameters are placeholders in the script that are replaced by actual values provided when the script is executed. This allows the scripts to be flexible and reusable for different inputs.
 
+## Prerequisites
+
+Ensure you have the following software installed on your system before running the scripts:
+
+- **Python 3.x** (for Python scripts)
+- **Bash** (for Bash scripts)
+- **pip** (Python package installer)
+- **smtplib** (for email notifications in Python scripts)
+- **psutil** (for system health monitoring)
+
+You can install `psutil` using pip:
+```bash
+pip install psutil
+
+
 ### Positional Parameters
 
 - **$1**: Represents the first argument passed to the script.
