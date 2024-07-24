@@ -37,7 +37,6 @@ jobs:
 
     - name: Test User Management Script
       run: |
-        cd ..
         cd user_management
         sudo bash user_management.sh add testuser testpass
         sudo bash user_management.sh modify testuser newtestpass
@@ -45,13 +44,11 @@ jobs:
 
     - name: Test Automated Backup Script
       run: |
-        cd ..
         cd automated_backup
         bash automated_backup.sh
 
     - name: Test Firewall Configuration Script
       run: |
-        cd ..
         cd firewall_configuration
         sudo bash firewall_configuration.sh add 8080
         sudo bash firewall_configuration.sh delete 8080
