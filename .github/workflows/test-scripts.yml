@@ -1,0 +1,58 @@
+name: Test IT Support Scripts
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install psutil requests
+
+    - name: Test Server Health Monitor
+      run: |
+        cd server_health_monitor
+        python3 server_health_monitor.py
+
+    - name: Test Network Connectivity Checker
+      run: |
+        cd network_connectivity_checker
+        python3 network_connectivity_checker.py
+
+    - name: Test Disk Usage Report
+      run: |
+        cd disk_usage_report
+        python3 disk_usage_report.py
+
+    - name: Test User Management Script
+      run: |
+        cd ..
+        cd user_management
+        sudo bash user_management.sh add testuser testpass
+        sudo bash user_management.sh modify testuser newtestpass
+        sudo bash user_management.sh delete testuser
+
+    - name: Test Automated Backup Script
+      run: |
+        cd ..
+        cd automated_backup
+        bash automated_backup.sh
+
+    - name: Test Firewall Configuration Script
+      run: |
+        cd ..
+        cd firewall_configuration
+        sudo bash firewall_configuration.sh add 8080
+        sudo bash firewall_configuration.sh delete 8080
+        sudo bash firewall_configuration.sh list
