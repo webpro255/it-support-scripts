@@ -9,5 +9,11 @@ A collection of Python and Bash scripts for various IT support tasks, including 
 - **Usage:**
   ```bash
   python3 server_health_monitor/server_health_monitor.py
- ```
+### 2. Network Connectivity Checker
+- **Description:** Checks network connectivity and logs the results, sending alerts if issues are detected.
+- **File:** `network_connectivity_checker/network_connectivity_checker.py`
+- **Usage:**
+  ```bash
+  python3 network_connectivity_checker/network_connectivity_checker.py
+
 
