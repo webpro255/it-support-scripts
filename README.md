@@ -27,5 +27,11 @@ A collection of Python and Bash scripts for various IT support tasks, including 
 - **Usage:**
   ```bash
   python3 disk_usage_report/disk_usage_report.py
+### 5. Automated Backup Script
+- **Description:** Automates the backup of important files and directories to a remote server.
+- **File:** `automated_backup/automated_backup.sh`
+- **Usage:**
+  ```bash
+  bash automated_backup/automated_backup.sh
 
 
