@@ -48,21 +48,16 @@ Several scripts in this repository use positional parameters to accept arguments
 - **Usage:**
   ```bash
   bash firewall_configuration/firewall_configuration.sh {add|delete|list} [port]
-### Argument Usage in Scripts
-
-For example, in the `firewall_configuration.sh` script:
-
-```bash
-sudo iptables -A INPUT -p tcp --dport "$1" -j ACCEPT
-```
-    $1 is add
-    $2 is 8080
-
-This command will add a rule to allow TCP traffic on port 8080.
 
 When running the script example :
-```bash
-bash firewall_configuration.sh add 8080
+  ```bash
+  bash firewall_configuration.sh add 8080
+  ```
+### Contributing
+Feel free to fork this repository and contribute by submitting a pull request.
+
+### License
+This project is licensed under the MIT License.
 
 
 
