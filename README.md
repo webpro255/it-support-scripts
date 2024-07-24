@@ -1,12 +1,6 @@
 # it-support-scripts
 A collection of Python and Bash scripts for various IT support tasks, including monitoring, user management, and more.
 
- **Clone the repository:**
-   ```bash
-   git clone https://github.com/webpro255/it-support-scripts.git
-   cd it-support-scripts
-   ```
-
 ## Prerequisites
 
 Ensure you have the following software installed on your system before running the scripts:
@@ -21,6 +15,42 @@ You can install `psutil` using pip:
 ```bash
 pip3 install psutil
 ```
+### Installation
+ **Clone the repository:**
+   ```bash
+   git clone https://github.com/webpro255/it-support-scripts.git
+   cd it-support-scripts
+   ```
+**Navigate to the respective script folder:**
+   ```bash
+   cd server_health_monitor  # Example for the server health monitor script
+   ```
+**Install required Python packages:**
+  ```bash
+  pip3 install -r requirements.txt
+  ```
+### Configuration
+
+Some scripts require configuration before they can be used.
+
+### Email Configuration
+
+**For scripts that send email notifications, update the email configuration section with your email server details:**
+  ```python
+  smtp_server = 'smtp.your-email-provider.com'
+  smtp_port = 587
+  email_user = 'your-email@example.com'
+  email_password = 'your-email-password'
+  email_to = 'alert-recipient@example.com'
+  ```
+### Backup Script Configuration
+
+**Update the paths and remote server details in the automated_backup.sh script:**
+  ```bash
+  backup_source="/path/to/important/files"
+  backup_dest="/path/to/backup/location"
+  remote_server="user@remote-server:/path/to/remote/backup"
+ ```
 
 Several scripts in this repository use positional parameters to accept arguments. Positional parameters are placeholders in the script that are replaced by actual values provided when the script is executed. This allows the scripts to be flexible and reusable for different inputs.
 
