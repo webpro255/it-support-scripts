@@ -9,13 +9,13 @@ Ensure you have the following software installed on your system before running t
 
 - **Python 3.x** (for Python scripts)
 - **Bash** (for Bash scripts)
-- **pip** (Python package installer)
+- **pip3** (Python package installer)
 - **smtplib** (for email notifications in Python scripts)
 - **psutil** (for system health monitoring)
 
 You can install `psutil` using pip:
 ```bash
-pip install psutil
+pip3 install psutil
 ```
 
 ### Positional Parameters
