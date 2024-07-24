@@ -1,6 +1,7 @@
 # it-support-scripts
 A collection of Python and Bash scripts for various IT support tasks, including monitoring, user management, and more.
 
+
 Several scripts in this repository use positional parameters to accept arguments. Positional parameters are placeholders in the script that are replaced by actual values provided when the script is executed. This allows the scripts to be flexible and reusable for different inputs.
 
 ## Prerequisites
@@ -18,6 +19,11 @@ You can install `psutil` using pip:
 pip3 install psutil
 ```
 
+ **Clone the repository:**
+   ```bash
+   git clone https://github.com/webpro255/it-support-scripts.git
+   cd it-support-scripts
+   
 ### Positional Parameters
 
 - **$1**: Represents the first argument passed to the script.
