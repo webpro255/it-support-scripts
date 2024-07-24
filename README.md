@@ -23,7 +23,7 @@ pip3 install psutil
    ```bash
    git clone https://github.com/webpro255/it-support-scripts.git
    cd it-support-scripts
-   
+   ```
 ### Positional Parameters
 
 - **$1**: Represents the first argument passed to the script.
