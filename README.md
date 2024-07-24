@@ -50,12 +50,6 @@ Several scripts in this repository use positional parameters to accept arguments
   bash firewall_configuration/firewall_configuration.sh {add|delete|list} [port]
 ### Argument Usage in Scripts
 
-Some of the scripts in this repository use positional parameters to accept arguments. Positional parameters are placeholders in the script that are replaced by actual values provided when the script is executed.
-
-- **$1**: Represents the first argument passed to the script.
-- **$2**: Represents the second argument passed to the script.
-- **$3**: Represents the third argument passed to the script, and so on.
-
 For example, in the `firewall_configuration.sh` script:
 
 ```bash
@@ -66,9 +60,10 @@ sudo iptables -A INPUT -p tcp --dport "$1" -j ACCEPT
 
 This command will add a rule to allow TCP traffic on port 8080.
 
-When running the script:
+When running the script example :
 ```bash
 bash firewall_configuration.sh add 8080
+
 
 
 
