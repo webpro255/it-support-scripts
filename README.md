@@ -21,5 +21,11 @@ A collection of Python and Bash scripts for various IT support tasks, including 
 - **Usage:**
   ```bash
   bash user_management/user_management.sh {add|delete|modify} username [password]
+### 4. Disk Usage Report
+- **Description:** Generates a report of disk usage on a server and emails the report.
+- **File:** `disk_usage_report/disk_usage_report.py`
+- **Usage:**
+  ```bash
+  python3 disk_usage_report/disk_usage_report.py
 
 
