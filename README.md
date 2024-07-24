@@ -33,5 +33,11 @@ A collection of Python and Bash scripts for various IT support tasks, including 
 - **Usage:**
   ```bash
   bash automated_backup/automated_backup.sh
+### 6. Firewall Configuration Script
+- **Description:** Automates the configuration of firewall rules on a Linux server.
+- **File:** `firewall_configuration/firewall_configuration.sh`
+- **Usage:**
+  ```bash
+  bash firewall_configuration/firewall_configuration.sh {add|delete|list} [port]
 
 
