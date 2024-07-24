@@ -81,10 +81,10 @@ Several scripts in this repository also use positional parameters to accept argu
   email_to = 'alert-recipient@example.com'
   ```
  - **Example Output:**
-  ```csharp
-  8.8.8.8 is down!
-  Network Connectivity Alert: 8.8.8.8 is down!
-  ```
+   ```csharp
+   8.8.8.8 is down!
+   Network Connectivity Alert: 8.8.8.8 is down!
+   ```
 
 ### 3. User Management Script
 - **Description:** Automates user account creation, deletion, and modification on a Linux system.
@@ -138,17 +138,40 @@ Several scripts in this repository also use positional parameters to accept argu
   backup_dest="/path/to/backup/location"
   remote_server="user@remote-server:/path/to/remote/backup"
   ```
+- **Example Output:**
+  ```bash
+  $ bash automated_backup/automated_backup.sh
+  Backup completed successfully.
+  ```
+- **Details in the script log:**
+  ```typescript
+  Creating backup: /path/to/backup/location/backup-2024-07-25.tar.gz
+  Copying backup to remote server: user@remote-server:/path/to/remote/backup
+  Cleaning up old backups (older than 7 days)
+  Backup completed successfully.
+  ```
 ### 6. Firewall Configuration Script
 - **Description:** Automates the configuration of firewall rules on a Linux server.
 - **File:** `firewall_configuration/firewall_configuration.sh`
+- **Configuration:** Ensure you have the necessary permissions to modify firewall rules. The script uses iptables, so ensure iptables is installed and configured on your system.
 - **Usage:**
   ```bash
   bash firewall_configuration/firewall_configuration.sh {add|delete|list} [port]
 
-- **When running the script example :**
+**When running the script example :**
+- **Add a rule for port 8080:**
+   ```bash
+   bash firewall_configuration.sh add 8080
+   ```
+- **Delete a rule for port 8080:**
+   ```bash
+   bash firewall_configuration.sh delete 8080
+   ```
+- **List all firewall rules:**
   ```bash
-  bash firewall_configuration.sh add 8080
+  bash firewall_configuration.sh list
   ```
+  
 ### Contributing
 Feel free to fork this repository and contribute by submitting a pull request.
 
