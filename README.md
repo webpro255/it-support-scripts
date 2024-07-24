@@ -59,7 +59,7 @@ Several scripts in this repository also use positional parameters to accept argu
   email_password = 'your-email-password'
   email_to = 'alert-recipient@example.com'
   ```
-- ### Example Output:
+- **Example Output:**
   ```csharp
   CPU usage is 85%
   High CPU usage: 85%
